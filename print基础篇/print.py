@@ -46,7 +46,7 @@ def zhuanyi():
             换行：\n   new line    换行
             回车：\r   return    回到当行首位
             水平制表符：\t   table  \t四个字符位
-            退格：\b    back     回退一个字符
+            退格：\b    back     回退覆盖一个字符
     :return:
     """
     print("http:\\\\baidu.com","转义反斜杠")
