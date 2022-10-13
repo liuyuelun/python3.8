@@ -47,6 +47,8 @@ def zhuanyi():
             回车：\r   return    回到当行首位
             水平制表符：\t   table  \t四个字符位
             退格：\b    back     回退覆盖一个字符
+    3、转义字符：不希望字符串中的转义字符起作用，在原字符串之前加一个r或R
+
     :return:
     """
     print("http:\\\\baidu.com","转义反斜杠")
@@ -57,6 +59,8 @@ def zhuanyi():
     print("helloooo\tworld","制表符：一个制表符占四个字符,不足四个补足剩余")
     print("hello\rworld","world覆盖hello")
     print("hello\bworld","回退一格覆盖掉o")
+    print(r"hello\nworld","小写r的原字符")
+    print(R"hello\nworld","大写R的原字符")
 
 if __name__ == '__main__':
     zhuanyi()
