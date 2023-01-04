@@ -181,6 +181,59 @@ def type_change():
     l = "19.9"
     print(type(m),type(n),type(l),type(int(m)),type(int(n)),type(int(float(l))))
 
+#输入函数
+def input_lesson():
+    """
+    作用：接收用户的输入
+    返回值类型：str
+    值的存储：使用=对输入的值进行存储
+    :return:
+    """
+    try:
+        int1 = int(input("请输入第一个整数："))
+        int2 = int(input("请输入第二个整数："))
+        sum = int1 + int2
+        print(sum,type(sum))
+    except ValueError :
+        print("输入错误，请输入整数")
+
+#运算符的使用
+def operator_lesson():
+    """
+    算数运算符
+    :return:
+    """
+    #算数运算符
+    print("===================算数运算符====================")
+    print(10+10)    #加法运算:20
+    print(10-10)    #减法运算:0
+    print(10*10)    #乘法运算:100
+    print(11/2)     #除法运算:5.5
+    print(11//2)    #整除运算：5
+
+    #赋值运算符
+    print("===================赋值运算符====================")
+    a = b = c = 20
+    print(a,id(a))
+    print(b,id(b))
+    print(c,id(c))
+    a+=30       #相当于a = a+30
+    print(a,id(a))
+    a-=20       #相当于a = a-20
+    print(a,id(a))
+
+    #解包赋值
+    print("===================解包赋值====================")
+    j,k,l = 10,20,30
+    print(j,k,l)
+    print()
+
+    #交换赋值
+    m,n = 100,200
+    print("交换赋值前：",m,n)
+    m,n=n,m
+    print("交换赋值后：",m,n)
+
 
 if __name__ == '__main__':
-    type_change()
+    operator_lesson()
