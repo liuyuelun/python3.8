@@ -43,5 +43,14 @@ def if_in_if():
         else:
             print("您的最终消费为：",money)
 
+def if_big():
+    num_a = int(input("请输入一个整数a：\n"))
+    num_b = int(input("请输入一个整数b：\n"))
+    if num_a > num_b:
+        print(num_a,"大于",num_b)
+    else:
+        print(num_b,"大于",num_a)
+    print("使用条件表达式进行表达")
+    print((str(num_a)+"大于"+str(num_b)) if num_a > num_b else (str(num_b)+"大于"+str(num_a)))
 if __name__ == '__main__':
-    if_in_if()
+    if_big()
