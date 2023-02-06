@@ -8,7 +8,6 @@ def while_sum():
     print(s)
     return s
 
-
 def for_num():
     for i in range(100, 1000):
         ge = i % 10
@@ -19,7 +18,6 @@ def for_num():
         if num == i:
             print(i, "是水仙花数")
 
-
 def for_breake():
     pwd = input("请输入密码：\n")
     for item in range(3):
@@ -29,7 +27,6 @@ def for_breake():
         else:
             print("密码错误")
             pwd = input("请重新输入密码：\n")
-
 
 def for_continue():
     """
@@ -42,18 +39,26 @@ def for_continue():
         else:
             print(item)
 
-
 def for_else():
+    pwd = input("请输入密码：\n")
     for item in range(2):
-        pwd = input("请输入密码：\n")
         if pwd == "8888":
             print("密码正确")
             break
         else:
-            print("密码错误")
+            pwd = input("密码错误,请重新输入：\n")
     else:
         print("密码已输入错误三次，请明天再试")
 
+def for_in_for():
+    for i in range(1,10):
+        for j in range(1,i+1):
+            print(str(i)+"x"+str(j)+"="+str(i*j),end="\t")
+        print()
+
+
+
+
 
 if __name__ == '__main__':
-    for_else()
+    for_in_for()
