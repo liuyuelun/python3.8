@@ -62,6 +62,20 @@ def list_sql():
     l.pop(2)
     print("删除2号索引位的元素之后，：", l, id(l))
 
+def list_sort():
+    #sort():对原列表所有元素进行从小到大进行排序，可以指定reverse=True,进行倒序排序
+    l = [9,3,6,8,4,1,4,6,7,97,5,4,3]
+    l.sort(reverse=True)
+    print("倒序排列：",l)
+    l.sort()
+    print("正序排列：",l)
+    #sorted():对列表进行排序，指定reverse=True，可以进行降序排列，原列表不发生改变
+    l0 = [9,3,45,7,1,5,6,7,1,9]
+    l1 = sorted(l0,reverse=True)
+    print("倒序排列后的列表：",l1)
+    l2 = sorted(l0,reverse=False)
+    print("正序排列后的列表：",l2)
+    print("sorted后的原列表l",l0)
 
 if __name__ == '__main__':
-    list_sql()
+    list_sort()
