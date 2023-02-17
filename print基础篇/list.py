@@ -7,6 +7,9 @@ def list_l():
     #创建列表的第二种方式list()
     lst = list(['hello','kitty'])
     print(lst)
+    #列表表达式：
+    ll = [i*i for i in range(1,11)]
+    print(ll)
 
 def element_find_ndex():
     list = ['hello','world',99,"hello"]
