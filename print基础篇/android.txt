@@ -1,0 +1,67 @@
+Applications Memory Usage (in Kilobytes):
+Uptime: 266677431 Realtime: 375738265
+
+** MEMINFO in pid 8143 [com.funbit.android] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   163245   163116        0    46738   164088   228308   141110    82787
+  Dalvik Heap    32431    32324        0     1267    33096    80535    31383    49152
+ Dalvik Other    23044    14196        0      296    32208                           
+        Stack     4052     4052        0     1232     4060                           
+       Ashmem        2        0        0        0       20                           
+      Gfx dev    25100    25100        0        0    25100                           
+    Other dev       28        0       28        0      268                           
+     .so mmap    15548      808    12652     1317    33432                           
+    .jar mmap     2922        0       76        0    22900                           
+    .apk mmap     2101        0      976        0    14996                           
+    .ttf mmap       41        0       12        0       96                           
+    .dex mmap    42680    42664       12    22224    42728                           
+    .oat mmap       49        0        8        0     1024                           
+    .art mmap     9652     9096       44       55    17896                           
+   Other mmap      911        4      868        0     1480                           
+   EGL mtrack    51348    51348        0        0    51348                           
+    GL mtrack    40819    40819        0        0    40819                           
+      Unknown      668      656        0      353      960                           
+        TOTAL   488123   384183    14676    73482   488123   308843   172493   131939
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:    41464                          50992
+         Native Heap:   163116                         164088
+                Code:    57260                         132916
+               Stack:     4052                           4060
+            Graphics:   117267                         117267
+       Private Other:    15700
+              System:    89264
+             Unknown:                                   17196
+ 
+           TOTAL PSS:   488123            TOTAL RSS:   486519       TOTAL SWAP PSS:    73482
+ 
+ Objects
+               Views:      620         ViewRootImpl:        1
+         AppContexts:       11           Activities:        2
+              Assets:       27        AssetManagers:        0
+       Local Binders:       94        Proxy Binders:       49
+       Parcel memory:       32         Parcel count:      129
+    Death Recipients:        3      OpenSSL Sockets:        8
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     4558
+  PAGECACHE_OVERFLOW:     2715          MALLOC_SIZE:      320
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       56             97  10349/2639/25  /data/user/0/com.funbit.android/databases/com.google.android.datatransport.events
+         4     3360             53     2712/143/7  /data/user/0/com.funbit.android/databases/chuck.db
+         4       52            100    4073/455/24  /data/user/0/com.funbit.android/databases/203821@bd_tea_agent.db
+         4       72             98    1073/820/25  /data/user/0/com.funbit.android/files/1400635347_31363337/im.db
+         4      192            100     497/412/25  /data/user/0/com.funbit.android/files/1400635347_31363337/msg_0.db
+         4       24             59      239/142/6  /data/user/0/com.funbit.android/databases/tracker.db
+         4       80             89   1082/1362/16  /data/user/0/com.funbit.android/databases/app_database
+         4        8                         0/0/0    (attached) temp
+         4       80             33        25/26/2  /data/user/0/com.funbit.android/databases/app_database (8)
+         4       80             72        30/28/4  /data/user/0/com.funbit.android/databases/app_database (7)
+         4       24             68    4360/1223/7  /data/user/0/com.funbit.android/databases/dwh-db

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="gbk"?>
+<config>
+  <!-- 包配置--> 
+ <package>com.funbit.android</package>
+  <!-- 主入口配置-->
+  <mainActivity>com.funbit.android.ui.splash.SplashActivity</mainActivity>
+  <!-- Scheme配置-->   
+   <Scheme>lita</Scheme> 
+  <!-- 白名单配置-->
+  <whiteActivity>
+	  com.funbit.android.MainActivity,
+	  com.funbit.android.ui.flashOrder.FlashOrderActivit,
+	  com.funbit.android.ui.search.SearchActivity,
+	  com.funbit.android.ui.categorizedSkill.CategorizedSkillActivity,
+	  com.funbit.android.ui.moment.activity.MomentDetailActivity,
+	  com.funbit.android.ui.follow.FollowActivity,
+	  com.funbit.android.ui.order.MakeOrderActivity,
+	  com.funbit.android.ui.editProfile.EditProfileActivity,
+	  com.funbit.android.ui.wallet.WalletActivity,
+	  com.funbit.android.ui.wallet.WithdrawalActivity,
+	  com.funbit.android.ui.wallet.WithdrawalConfirmActivity,
+	  com.funbit.android.ui.wallet.WithdrawHistoryActivity,
+	  com.funbit.android.ui.wallet.TransactionsActivity,
+	  com.funbit.android.ui.coupon.MyCouponActivity,
+	  com.funbit.android.ui.dashboard.MyDashboardActivity,
+	  com.funbit.android.ui.visitors.VisitorsActivity,
+	  com.funbit.android.ui.voiceRoom.MyVoiceRoomsActivity,
+	  com.funbit.android.ui.user.UserDetailActivity,
+	  com.funbit.android.ui.chat.ChatActivity,
+	  com.funbit.android.ui.view.largerImage.LargerImageActivity,
+	  com.funbit.android.ui.voiceRoom.FunVoiceRoomActivity,
+	  com.funbit.android.ui.view.web.WebActivity,
+	  com.funbit.android.ui.voiceRoom.VoiceRoomActivity,
+	  com.funbit.android.ui.voiceRoom.RoomSettingActivity,
+	  com.funbit.android.ui.order.grabbing.OrderGrabbingHallActivity
+ </whiteActivity>
+  <!-- 检查间隔 秒-->
+  <interval>1</interval>
+  <!-- 检查次数-->
+  <Count>10000</Count>
+</config>
