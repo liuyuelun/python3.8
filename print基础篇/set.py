@@ -14,6 +14,9 @@ def set_create():
     #字符串转换成集合
     ss = set('python')
     print("python字符串，转换为集合后：",ss)
+    #集合生成表达式：
+    sss = {i*i for i in range(1,10)}
+    print(sss)
 
 def set_sql():
     s = {1,2,3,4,5}
@@ -63,4 +66,4 @@ def set_compare():
 
 
 if __name__ == '__main__':
-    set_compare()
+    set_create()

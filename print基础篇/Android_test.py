@@ -2,7 +2,7 @@
 import os
 import time
 
-#from appium import webdriver
+from ui2 import send_gift
 import csv
 
 """class startSession(object):
@@ -40,6 +40,7 @@ def memory_test():
     # 设置循环次数
     count = 20  # 设置获取内存占用的次数
     while count > 0:
+        send_gift()
         lines = os.popen(". ~/.bash_profile;adb shell dumpsys meminfo com.funbit.android")  # adb 查看app内存
         result = lines.read()
         # 以逗号分隔
@@ -67,28 +68,6 @@ def memory_test():
         writer.writerows(alldata)
         file.close()
 
-def android_memory_test():
-    native_heap = []
-    dalvik_heap = []
-    activities = []
-    while True:
-        cmd = ". ~/.bash_profile;adb shell dumpsys meminfo com.funbit.android>android.txt"
-        os.system(cmd)
-        f = open("android.txt","r")
-        lines = f.readlines()
-        for line in lines:
-            if "Native Heap" in line:
-                s=line.split()[2]
-                native_heap.append(s)
-            if "Dalvik Heap" in line:
-                s=line.split()[2]
-                dalvik_heap.append(s)
-            if "Activities" in line:
-                s = line.split()[1]
-                activities.append(s)
-        time.sleep(5)
-        print(native_heap,dalvik_heap,activities)
-        #return native_heap,dalvik_heap,activities
 
 def test_popen():
     f = os.popen("ls")
@@ -103,6 +82,4 @@ def test_popen():
 
 
 if __name__ == '__main__':
-    #android_memory_test()
-    #memory_test()
-    test_popen()
+    memory_test()
