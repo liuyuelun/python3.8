@@ -36,9 +36,9 @@ def memory_test():
     dalvik：Java对象分配的占据内存
     :return:
     """
-    alldata = [("native", "dalvik", "TOTAL","Activities")]  # 写到表格中三个字段
+    alldata = [("native", "dalvik", "TOTAL","Activities","views")]  # 写到表格中三个字段
     # 设置循环次数
-    count = 20  # 设置获取内存占用的次数
+    count = 100  # 设置获取内存占用的次数
     while count > 0:
         send_gift()
         lines = os.popen(". ~/.bash_profile;adb shell dumpsys meminfo com.funbit.android")  # adb 查看app内存
@@ -58,7 +58,10 @@ def memory_test():
         activities = temp.split('Activities')[1].split(',')[1]
         print("Activities:" + str(activities))
 
-        alldata.append([native_heap, dalvik_heap, total,activities])
+        Views = temp.split('Views')[1].split(',')[1]
+        print("Views:" + str(Views))
+
+        alldata.append([native_heap, dalvik_heap, total,activities,Views])
         count -= 1
         print('还剩余：%s次' % count)
         time.sleep(5)  # 等待时间

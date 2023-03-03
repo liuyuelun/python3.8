@@ -17,6 +17,9 @@ def send_gift():
     d.xpath('//*[@resource-id="com.funbit.android:id/message_list"]/android.widget.RelativeLayout[1]').click_exists()
     #点击打开送礼面板
     d.xpath('//*[@resource-id="com.funbit.android:id/input"]/android.widget.LinearLayout[1]/android.widget.ImageView[4]').click_exists()
+    #选中第二个礼物tab：
+    d.xpath(
+        '//*[@resource-id="com.funbit.android:id/giftTabLayout"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]').click_exists()
     #点击选中面板第一个礼物
     d.xpath('//*[@resource-id="com.funbit.android:id/giftsViewPager"]/androidx.recyclerview.widget.RecyclerView[1]/androidx.recyclerview.widget.RecyclerView[1]/android.widget.FrameLayout[1]').click_exists()
     gift_price = d.xpath('//*[@text="199"]').get_text()
@@ -29,3 +32,9 @@ def send_gift():
     d.press("back")
     d.press("back")
     d.press("back")
+def test_ui2():
+    d = u2.connect('8CFX1NX8P')
+    print(d.app_list_running())
+
+if __name__ == '__main__':
+    test_ui2()
