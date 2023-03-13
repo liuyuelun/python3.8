@@ -71,6 +71,62 @@ def str_is():
     s = "hello python 123"
     print("字符串%s是否全部由数字和字母组成：%s"%(s,s.isalnum()))
 
+def str_replace():
+    """
+    reppace(n,m,num):第一个参数是被指定替换的字符串，第二个是替换指定字符串的内容，第三个参数是指定替换的最大次数
+    join()：将列表或元组中的字符串合并成一个字符串
+    :return:
+    """
+    s = "hello python python python"
+    print(s.replace("python","java",1))
+    l = ["python","java","go"]
+    print("用拼接符|将列表%s的每个元素拼接成一个新字符串%s"%(l,"|".join(l)))
+    print("用拼接符*将字符串%s的每个元素拼接成一个新字符串%s:"%(s,"*".join(s)))
+
+def str_compare():
+    """
+    字符串比较原理：比较的是两个字符串的原始值ord(s),比较方式是逐个字符串进行比较
+    ord(s)获取字符的原始值
+    chr(s)获取原始值对应的字符串
+    等值比较：比较的是内存地址
+    :return:
+    """
+    print("'app'>'apple'比较的结果是%s："%("app">"apple"))
+    print("'app'>'bug'比较的结果是%s："%("app">"bug"))
+    print("字符串a的原始值是%s："%ord("a"))
+    print("字符串b的原始值是%s："%ord("b"))
+    print("原始值12345的对应的字符串是%s："%chr(12345))
+    a = b = "python"
+    c = "python"
+    print("a和b是否相等%s"%(a == b))
+    print("b和c是否相等%s"%(b==c))
+    print("a的内存地址：%s\nb的内存地址：%s\nc的内存地址：%s\n"%(id(a),id(b),id(c)))
+def str_format():
+    """
+    格式化字符串的第一种方式：%s、%f、%d
+    格式化字符串的第二种方式：format
+    格式化字符串的第三种方式：f"{n}"
+    :return:
+    """
+    name = "张三"
+    age = 18
+    city = "北京"
+    print("我的名字叫%s,今年%d岁,来自%s"%(name,age,city))
+    print("我的名字叫{0},今年{1}岁,来自{2}".format(name,age,city))
+    print(f"我的名字叫{name},今年{18}岁,来自{city}")
+
+    print("我的名字叫%10s,今年%10d岁"%(name,age))  #10表示宽度
+    print("圆周率的值是%10.2f"%3.1415926)   #.2表示保留2位小数，10表示后推10个占位符
+    print("format表示圆周率是{0:10.2f}".format(3.1415926))     #.2f表示保留2位小数，10表示后推10个占位符
+
+def str_encode():
+    s = "天涯共此时"
+    #编码
+    print("%s  编码后的内容是：%s"%(s,s.encode("UTF-8")))
+    byte = s.encode("UTF-8")
+    #解码
+    #byte表示二级制文件
+    print("%s  解码后byte的内容是  %s"%(byte,byte.decode(encoding="UTF-8")))
 
 if __name__ == '__main__':
-    str_is()
+    str_encode()
