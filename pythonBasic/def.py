@@ -64,5 +64,24 @@ def fib_add(n):
          res +=str(fib(i))
     return int(res)
 
+def division():
+    try:
+        a = int(input("请输入第一个整数：\n"))
+        print(a)
+        b = int(input("请输入第二个整数：\n"))
+        print(b)
+        result = a/b
+        return result
+    except ZeroDivisionError as e:
+        print("被除数不能为0！")
+        return division()
+    except ValueError as e:
+        print("请输入整数！")
+        return division()
+    except BaseException as e:
+        print(e)
+        return division()
+
+
 if __name__ == '__main__':
-    print(fib_add(6))
+    print(division())
