@@ -240,7 +240,7 @@ def testapi():
                     print(svipbox[n]["giftId"], g6154)
                 else:
                     print(svipbox[n]["giftId"])
-def result():
+def openboxresult():
     if g6044 != 0:
         print("宝箱中礼物g6044(%s)的概率是%s" % (g6044, g6044 / (alltime * t)))
     else:
@@ -282,6 +282,43 @@ def result():
     else:
         print("未抽中g6154")
 
+def shuiguojidraw():
+    import requests
+
+    url = "https://api-test.funbit.me/litaroom/v2/lottery/lottery"
+
+    payload = "{\"roomId\":\"2000\",\"levelId\":\"1\",\"num\":\"10\",\"price\":\"300\",\"version\":\"4\",\"free\":false,\"userType\":\"normal\"}"
+    headers = {
+        'Host': 'api-test.funbit.me',
+        'proxyHeader': 'eyJjaGVjayI6IkU5RDAwOTUzMUY4MkJGMzYxRDM5MTRFNkU0RDRFOEMxIiwiY2l0eSI6Imhvbmdfa29uZyIsInJlZ2lvbiI6IkhLIiwidGltZSI6MTY5MDI3MzMzMjc2MCwidXNlcklkIjoxNjM3LCJ1c2VyTG9jYWxlIjoiaW4tSUQiLCJ2ZXJzaW9uIjoiMi4wIn0',
+        'Accept': '*/*',
+        'appPlat': 'Web',
+        'appVersion': '2.0.0',
+        'locale': 'in',
+        'AccessToken': 'WeCg9mA1oJ/miq3ac3xZO3aw3DH5nbziKRnJ+Z41lq5DJl9xkClQHyAssLyqaD64',
+        'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
+        'deviceToken': '',
+        'Origin': 'https://h5-test.lita.gg',
+        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',
+        'Referer': 'https://h5-test.lita.gg/',
+        'userLocale': 'in',
+        'Content-Type': 'application/json;charset=UTF-8'
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+    award = response.json()["data"]["awardList"]
+    if response.status_code != "0":
+        print("服务器异常！%s"%response.status_code)
+    if response.json()["status"] != "0":
+        print("抽奖异常！%s"%response.json())
+    return award
+
+def forshuiguoji():
+    global g6170,g6168,g6172,g6174,g6171,g6123,g10244,g6085
+
+def shuiguojiresult():
+    pass
+
 def manynumber():
     threads = []
     for i in range(t):
@@ -291,7 +328,7 @@ def manynumber():
         threads.append(t1)
     for t1 in threads:
         t1.join()
-    result()
+    openboxresult()
     end_time = datetime.now()
     print(end_time)
     print("脚本总耗时是%s"%(end_time-start_time))
